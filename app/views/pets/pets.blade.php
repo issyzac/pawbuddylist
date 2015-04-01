@@ -1,3 +1,4 @@
+ @extends('master.layout')
 <?php
  /**
  * Created by PhpStorm.
@@ -5,8 +6,6 @@
  * Date: 3/30/15
  * Time: 10:21 AM
  */?>
-
- @extends('master.layout')
 
  @section('contents')
 
@@ -17,7 +16,6 @@
 			</div> <!-- //end span12 -->
 		</div> <!-- //end row -->
 	</div> <!-- //end container -->
-
 
 	<div id="product-board">
 
@@ -488,11 +486,5 @@
 
 	</div> <!-- //end product-board -->
 
-	<div class="load-more-container">
-		<button class="btn load-more">
-			load more
-		</button>
-	</div>
-
-	@stop
+@stop
 

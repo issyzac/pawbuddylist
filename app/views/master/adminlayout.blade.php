@@ -41,9 +41,6 @@
  	    @yield('contents')
  	</div> <!-- //end product-board -->
 
- 	<footer>
- 	    @include('master.footer')
- 	</footer>
 
 
  <script src="{{ asset('js/jquery-1.9.1.min.js') }}"></script>

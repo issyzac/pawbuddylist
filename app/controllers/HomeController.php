@@ -24,4 +24,12 @@ class HomeController extends BaseController {
         return View::make('home.index');
     }
 
+    public function a_index(){
+        return View::make('admin.admin');
+    }
+
+    public function admin_panel_index(){
+        return View::make('admin.adminpanel');
+    }
+
 }

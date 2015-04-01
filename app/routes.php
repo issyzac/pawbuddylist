@@ -13,6 +13,8 @@
 
 Route::get('/', 'HomeController@homeIndex');
 Route::get('home', 'HomeController@homeIndex');
+Route::get('administrator', 'Homecontroller@a_index');
+Route::get('admin_panel', 'Homecontroller@admin_panel_index');
 
 
 //Pets Controller Routes
