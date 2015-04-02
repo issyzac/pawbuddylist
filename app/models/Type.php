@@ -23,4 +23,10 @@ Class Type extends Eloquent{
 
     }
 
+    public function tips(){
+        return $this->hasMany('Tip', 'pet_type_id', 'id');
+    }
+
+
+
 }

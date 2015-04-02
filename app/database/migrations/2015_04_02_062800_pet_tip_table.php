@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class PetTypeTable extends Migration {
+class PetTipTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,11 +12,14 @@ class PetTypeTable extends Migration {
 	 */
 	public function up()
 	{
-		//
-        Schema::create('pet_type', function(Blueprint $table)
+        //
+        Schema::create('pet_tip', function(Blueprint $table)
         {
             $table->increments('id');
-            $table->string('pet_type_name');
+            $table->integer('pet_type_id');
+            $table->integer('pet_category_id');
+            $table->integer('tip_about');
+            $table->string('tip_description');
             $table->timestamps();
         });
 	}
@@ -29,7 +32,7 @@ class PetTypeTable extends Migration {
 	public function down()
 	{
 		//
-        Schema::drop('pet_type');
+        Schema::drop('pet_tip');
 	}
 
 }

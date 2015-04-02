@@ -28,4 +28,8 @@ Class Category extends Eloquent{
         return $this->hasMany('Pet', 'category_id', 'id');
     }
 
+    public function tips(){
+        return $this->hasMany('Tip', 'pet_category_id', 'id');
+    }
+
 }

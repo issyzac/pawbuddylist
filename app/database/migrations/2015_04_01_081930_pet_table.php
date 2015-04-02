@@ -16,6 +16,7 @@ class PetTable extends Migration {
         Schema::create('pet', function(Blueprint $table)
         {
             $table->increments('id');
+            $table->integer('type_id');
             $table->integer('category_id');
             $table->integer('appearance_id');
             $table->string('pet_name');
@@ -23,7 +24,6 @@ class PetTable extends Migration {
             $table->string('pet_price');
             $table->string('pet_amount');
             $table->integer('pet_image_id');
-            $table->string('remember_token');
             $table->timestamps();
         });
 	}

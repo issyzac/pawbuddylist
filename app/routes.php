@@ -13,13 +13,17 @@
 
 Route::get('/', 'HomeController@homeIndex');
 Route::get('home', 'HomeController@homeIndex');
-Route::get('administrator', 'Homecontroller@a_index');
-Route::get('admin_panel', 'Homecontroller@admin_panel_index');
+Route::get('administrator', 'HomeController@a_index');
+Route::any('admin_panel', array('as' => 'panel', 'uses' => 'HomeController@admin_panel_index'));
 
+Route::post('addtype', 'HomeController@add_type');
+Route::post('category', 'HomeController@add_category');
+Route::get('getcategory/{id}', 'HomeController@select_category');
+Route::post('add_new_tip', 'HomeController@add_tip');
+Route::post('add_new_pet', 'HomeController@add_pet');
 
 //Pets Controller Routes
 Route::get('pets/index', 'PetsController@index');
-
 
 //Tips Controller Routes
 Route::get('tips/index', 'TipsController@index');
